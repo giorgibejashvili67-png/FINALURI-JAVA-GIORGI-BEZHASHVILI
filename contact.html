@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>კონტაქტი - FilmSite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+      <img src="img/Screenshot 2025-12-03 220535.png" alt="FilmSite Logo">
+      <span>FilmSite</span>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">მთავარი</a>
+    <a href="about.html">ჩვენ შესახებ</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="login.html">შესვლა</a>
+  </nav>
+</header>
+
+<main class="page form-page">
+  <div class="form-container">
+    <h1>დაგვიკავშირდი</h1>
+    <p class="form-subtitle">გაქვთ გამოხმელი ან მოთხოვნა? მოგვწერეთ!</p>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="სახელი" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="surname" placeholder="გვარი" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="ელ.ფოსტა" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" placeholder="შეტყობინება" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">გაგზავნა</button>
+      <div id="contactMsg" class="note"></div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 FilmSite • info@filmsite.example</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

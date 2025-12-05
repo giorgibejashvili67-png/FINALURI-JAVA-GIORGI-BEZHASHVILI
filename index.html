@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmSite — მთავარი</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Popup overlay */
+    #filmOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      z-index: 900;
+    }
+
+    /* Popup box */
+    #filmInfo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #111;
+      color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      width: 320px;
+      max-width: 90%;
+      text-align: center;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+    }
+
+    #filmInfo button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #ff8c42;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #filmInfo button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+      <img src="img/Screenshot 2025-12-03 220535.png" alt="Logo">
+      <span>FilmSite</span>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">მთავარი</a>
+    <a href="about.html">ჩვენ შესახებ</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="login.html">შესვლა</a>
+  </nav>
+</header>
+
+<!-- SLIDER -->
+<section class="slider" id="siteSlider">
+  <div class="slide active"><img src="img/Screenshot 2025-12-03 225444.png"></div>
+  <div class="slide"><img src="img/Screenshot_3-12-2025_234856_www.gvorn.ru.jpeg"></div>
+  <div class="slide"><img src="img/Screenshot 2025-12-03 235116.png"></div>
+</section>
+
+<!-- FILM LIST -->
+<section class="film-list">
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082146.png" class="poster">
+    <div class="meta">
+      <h3>რკინის კაცი</h3>
+      <p>2008</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('ironman')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082501.png" class="poster">
+    <div class="meta">
+      <h3>ცუდი ბიჭები 2</h3>
+      <p>2003</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('badboys2')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082540.png" class="poster">
+    <div class="meta">
+      <h3>ტერმინატორი 2</h3>
+      <p>1991</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('terminator2')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082616.png" class="poster">
+    <div class="meta">
+      <h3>გატაცება 60 წამში</h3>
+      <p>2000</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('kidnapping60')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082428.png" class="poster">
+    <div class="meta">
+      <h3>ავატარი 2</h3>
+      <p>2023</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('avatar2')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082404.png" class="poster">
+    <div class="meta">
+      <h3>კაპიტანი ამერიკა</h3>
+      <p>2011</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('captainamerica')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082404.png" class="poster">
+    <div class="meta">
+      <h3>შურისმაძიებლები 1</h3>
+      <p>2012</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('avengers1')">ყურება</button>
+    </div>
+  </div>
+
+  <div class="film-card">
+    <img src="img/Screenshot 2025-12-05 082229.png" class="poster">
+    <div class="meta">
+      <h3>ფორსაჟი 5</h3>
+      <p>2011</p>
+    </div>
+    <div class="actions">
+      <button onclick="showFilmDetails('fast5')">ყურება</button>
+    </div>
+  </div>
+
+</section>
+
+<section class="content">
+  <h1>კეთილი იყოს შენი მობრძანება FilmSite-ზე</h1>
+  <p>საუკეთესო ფილმები და სერიალები ერთ სივრცეში.</p>
+</section>
+
+<footer>
+  © 2025 FilmSite — ყველა უფლება დაცულია
+</footer>
+
+<!-- FILM INFO POPUP -->
+<div id="filmOverlay"></div>
+<div id="filmInfo">
+    <h3 id="filmTitle"></h3>
+    <p id="filmYear"></p>
+    <p id="filmDesc"></p>
+    <button onclick="closeFilmInfo()">დახურვა</button>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>

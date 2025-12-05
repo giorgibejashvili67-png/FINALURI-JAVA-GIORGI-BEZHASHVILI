@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ფილმის დეტალები - FilmSite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+      <img src="img/Screenshot 2025-12-03 220535.png" alt="FilmSite Logo">
+      <span>FilmSite</span>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">მთავარი</a>
+    <a href="about.html">ჩვენ შესახებ</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="login.html">შესვლა</a>
+  </nav>
+</header>
+
+<main class="page movie-detail-page">
+  <div class="movie-container">
+    <div class="movie-image-wrapper">
+      <img id="movieImage" alt="Movie Poster">
+    </div>
+    <div class="movie-info">
+      <h1 id="movieTitle"></h1>
+      <p class="movie-year"><strong>წელი:</strong> <span id="movieYear"></span></p>
+      <p class="movie-genre"><strong>ჟანრი:</strong> <span id="movieGenre"></span></p>
+      <p class="movie-description"><strong>აღწერა:</strong> <span id="movieDescription"></span></p>
+      <a href="index.html" class="back-link">← დაბრუნდით ფილმების სიაში</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 FilmSite</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
