@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>კონტაქტი — FilmSite</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/burger.js"></script>
+  <script defer src="js/contact.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+      <span>FilmSite</span>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">მთავარი</a>
+    <a href="about.html">ჩვენ შესახებ</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="login.html">შესვლა</a>
+  </nav>
+</header>
+
+<main class="page form-page">
+  <h1>დაგვიკავშირდი</h1>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="სახელი" required>
+    <input type="text" id="surname" placeholder="გვარი" required>
+    <input type="email" id="email" placeholder="ელ.ფოსტა" required>
+    <textarea id="message" placeholder="შეტყობინება" rows="5" required></textarea>
+    <button type="submit">გაგზავნა</button>
+    <div id="contactMsg" class="note"></div>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 FilmSite • info@filmsite.example</p>
+</footer>
+
+<script>
+// Get elements
+const burger = document.getElementById("burger");
+const nav = document.getElementById("navMenu");
+
+// Add click event
+burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>შესვლა</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+      <span>FilmSite</span>
+  </div>
+
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a href="index.html">მთავარი</a>
+    <a href="about.html">ჩვენ შესახებ</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="login.html">შესვლა</a>
+  </nav>
+</header>
+
+<section class="page form-page">
+  <h1>შესვლა</h1>
+
+  <form onsubmit="login(event)">
+    <input type="text" placeholder="მომხმარებელი" required>
+    <input type="password" placeholder="პაროლი" required>
+    <button>შესვლა</button>
+    <div id="loginMsg" class="note"></div>
+  </form>
+</section>
+
+<footer>© 2025 FilmSite</footer>
+<script src="app.js"></script>
+
+<script>// Get elements
+const burger = document.getElementById("burger");
+const nav = document.getElementById("navMenu");
+
+// Add click event
+burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    burger.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
